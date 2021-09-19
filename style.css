@@ -11,14 +11,13 @@
 html {
 	height: 2530px;
 	overflow-x: hidden;
-	overflow-y: auto scroll;
 }
 
 body {
 	height: 100%;
 	margin: 40px;
 	background: linear-gradient(180deg, rgba(37, 45, 66, 0.91) 2.08%, rgba(25, 138, 137, 0.8645) 39.58%, rgba(34, 96, 142, 0.91) 77.08%);
-	
+
 	color: white;
 }
 
@@ -42,14 +41,12 @@ body {
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#backtitle {
-	position: absolute;
-	top: 0;
-	left: -1.5%;
+#events-title::before {
 	z-index: -1;
+	position: absolute;
+	left: -1.5%;
 	width: 100%;
-
-	text-align: center;
+	content: "events";
 	color: #33779E;
 }
 
