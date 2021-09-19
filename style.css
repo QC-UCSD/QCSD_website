@@ -24,8 +24,7 @@ body {
 /* ---------- EVENTS SECTION ---------- */
 #events {
 	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+	flex-flow: column wrap;
 	position: relative;
 	height: 33%;
 }
@@ -79,8 +78,7 @@ body {
 
 #events-socials {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 
 	position: absolute;
 	top: 3.2vw;
@@ -134,12 +132,11 @@ body {
 
 @media only screen and (max-width: 715px) {
 	#events-socials {
-		flex-direction: column;
-		flex-wrap: nowrap;
+		flex-flow: column nowrap;
 		width: 60vw;
 		height: 70vh;
 	}
-
+	
 	.card {
 		width: calc(58vw - 53px);
 		height: 10vh;
