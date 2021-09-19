@@ -1,1 +1,170 @@
+@font-face {
+	font-family: DMSans;
+	src: url(fonts/DM_Sans/DMSans-Regular.ttf);
+}
 
+@font-face {
+	font-family: DMSans_Bold;
+	src: url(fonts/DM_Sans/DMSans-Bold.ttf);
+}
+
+html {
+	height: 2530px;
+	overflow-x: hidden;
+	overflow-y: auto scroll;
+}
+
+body {
+	height: 100%;
+	margin: 40px;
+	background: linear-gradient(180deg, rgba(37, 45, 66, 0.91) 2.08%, rgba(25, 138, 137, 0.8645) 39.58%, rgba(34, 96, 142, 0.91) 77.08%);
+	
+	color: white;
+}
+
+/* ---------- EVENTS SECTION ---------- */
+#events {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+	height: 33%;
+}
+
+#events-col1 {
+	width: 42%;
+}
+
+#events-title {
+	font-family: DMSans_Bold;
+	font-size: 11vw;
+	text-align: center;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#backtitle {
+	position: absolute;
+	top: 0;
+	left: -1.5%;
+	z-index: -1;
+	width: 100%;
+
+	text-align: center;
+	color: #33779E;
+}
+
+#events-weekly {
+	position: relative;
+	text-align: center;
+	font-family: DMSans;
+	height: 80%;
+	width: 80%;
+	top: 5%;
+	left: 9.5%;
+
+	background: rgba(160, 201, 225, 0.24);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(4px);
+	border-radius: 43px;
+}
+
+#weeklyTitle {
+	position: relative;
+	top: 30px;
+	font-size: 3.5vw;
+}
+
+#weeklyTime {
+	position: relative;
+	bottom: -25%;
+	font-size: 3vw;
+}
+
+#events-socials {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	position: absolute;
+	top: 3.2vw;
+	right: -93px;
+	width: 58vw;
+	height: 40vw;
+
+	background: rgba(160, 201, 225, 0.24);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(4px);
+	border-radius: 43px;
+}
+
+.card {
+	width: 25vw;
+	height: 10vw;
+	margin-left: 1.6vw;
+	margin-top: 1.6vw;
+	border-radius: 10px;
+
+	font-family: DMSans;
+}
+
+.past {
+	background: #4A4A4E;
+}
+
+.future {
+	background: #18605F;
+}
+
+.cardTitle {
+	position: relative;
+	left: 4%;
+	top: 2.5%;
+	font-size: 2vw;
+}
+
+.cardDate {
+	position: relative;
+	left: 75%;
+	bottom: 21%;
+	font-size: 1.5vw;
+}
+
+.cardDescription {
+	position: relative;
+	left: 4%;
+	font-size: 1.5vw;
+}
+
+@media only screen and (max-width: 715px) {
+	#events-socials {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		width: 60vw;
+		height: 70vh;
+	}
+
+	.card {
+		width: calc(58vw - 53px);
+		height: 10vh;
+		border-radius: 48px 0 0 48px;
+		margin-left: 2vw;
+		margin-top: 1.43vh;
+	}
+
+	.cardTitle {
+		left: 10%;
+		top: 20%;
+		font-size: 20px;
+	}
+
+	.cardDate {
+		left: 70%;
+		bottom: 8%;
+		font-size: 18px;
+	}
+
+	.cardDescription {
+		left: 10%;
+		font-size: 12px;
+	}
+}
