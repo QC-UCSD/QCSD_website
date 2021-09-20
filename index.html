@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
@@ -9,45 +9,67 @@
 		<div id="about"></div>
 
 		<div id="events">
-			<!-- todo: responsiveness to screen width, make single column at 715px -->
-			<div id="events-col1">
-				<div id="events-title">events</div>
-				<div id="events-weekly">
-					<div id="weeklyTitle">Weekly General<br>Sessions</div>
-					<div id="weeklyTime">Tuesdays, 6pm</div>
+			<!--
+				todo: read in events (js onload) from txt files
+			-->
+			<div class="row">
+				<div class="col-5">
+					<div id="events-title">events</div>
+					<div id="events-weekly">
+						<div id="weekly-container">
+							<div id="weekly-title">Weekly General<br>Sessions</div>
+						</div>
+						<div id="weekly-container">
+							<div id="weekly-time">Tuesdays, 6pm</div>
+						</div>
+					</div>
 				</div>
-			</div>
-			<!-- todo: read in events (js onload) from txt files -->
-			<div id="events-socials">
-				<div class="card past">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Sept 4</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card past">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Sept 5</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card past">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Sept 6</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card future">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Dec 1</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card future">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Dec 2</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card future">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Dec 3</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+
+				<div class="col-7">
+					<div id="events-socials">
+						<div class="card past">
+							<div class="card-title-row">
+								<div class="cardTitle">Event Title</div>
+								<div class="cardDate">Sept 4</div>
+							</div>
+							<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+						</div>
+						<div class="card past">
+							<div class="card-title-row">
+								<div class="cardTitle">Event Title</div>
+								<div class="cardDate">Sept 5</div>
+							</div>
+							<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+						</div>
+						<div class="card past">
+							<div class="card-title-row">
+								<div class="cardTitle">Event Title</div>
+								<div class="cardDate">Sept 6</div>
+							</div>
+							<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+						</div>
+						<div class="card future">
+							<div class="card-title-row">
+								<div class="cardTitle">Event Title</div>
+								<div class="cardDate">Dec 1</div>
+							</div>
+							<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+						</div>
+						<div class="card future">
+							<div class="card-title-row">
+								<div class="cardTitle">Event Title</div>
+								<div class="cardDate">Dec 2</div>
+							</div>
+							<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+						</div>
+						<div class="card future">
+							<div class="card-title-row">
+								<div class="cardTitle">Event Title</div>
+								<div class="cardDate">Dec 3</div>
+							</div>
+							<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

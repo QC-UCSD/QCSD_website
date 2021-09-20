@@ -8,13 +8,16 @@
 	src: url(fonts/DM_Sans/DMSans-Bold.ttf);
 }
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	height: 2530px;
 	overflow-x: hidden;
 }
 
 body {
-	height: 100%;
 	margin: 40px;
 	background: linear-gradient(180deg, rgba(37, 45, 66, 0.91) 2.08%, rgba(25, 138, 137, 0.8645) 39.58%, rgba(34, 96, 142, 0.91) 77.08%);
 
@@ -22,21 +25,11 @@ body {
 }
 
 /* ---------- EVENTS SECTION ---------- */
-#events {
-	display: flex;
-	flex-flow: column wrap;
-	position: relative;
-	height: 33%;
-}
-
-#events-col1 {
-	width: 42%;
-}
-
 #events-title {
 	font-family: DMSans_Bold;
-	font-size: 11vw;
+	font-size: 20vw;
 	text-align: center;
+
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -45,18 +38,17 @@ body {
 	position: absolute;
 	left: -1.5%;
 	width: 100%;
+
 	content: "events";
 	color: #33779E;
 }
 
 #events-weekly {
-	position: relative;
+	margin-top: 20px;
+	height: 60vw;
+
 	text-align: center;
 	font-family: DMSans;
-	height: 80%;
-	width: 80%;
-	top: 5%;
-	left: 9.5%;
 
 	background: rgba(160, 201, 225, 0.24);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -64,27 +56,24 @@ body {
 	border-radius: 43px;
 }
 
-#weeklyTitle {
-	position: relative;
-	top: 30px;
-	font-size: 3.5vw;
+#weekly-container {
+	height: 50%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-#weeklyTime {
-	position: relative;
-	bottom: -25%;
-	font-size: 3vw;
-}
+#weekly-title { font-size:   8vw; }
+#weekly-time  { font-size: 6.5vw; }
 
 #events-socials {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: column nowrap;
+	margin-top: 40px;
 
-	position: absolute;
-	top: 3.2vw;
-	right: -93px;
-	width: 58vw;
-	height: 40vw;
+	font-family: DMSans;
 
 	background: rgba(160, 201, 225, 0.24);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -93,72 +82,137 @@ body {
 }
 
 .card {
-	width: 25vw;
-	height: 10vw;
-	margin-left: 1.6vw;
-	margin-top: 1.6vw;
+	margin: 20px 20px 0 20px;
+	padding: 10px;
 	border-radius: 10px;
 
 	font-family: DMSans;
 }
 
-.past {
-	background: #4A4A4E;
+.card:last-child {
+	margin-bottom: 20px;
 }
 
-.future {
-	background: #18605F;
+.past   { background: #4A4A4E; }
+.future { background: #18605F; }
+
+.card-title-row {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items:flex-start;
 }
 
 .cardTitle {
-	position: relative;
-	left: 4%;
-	top: 2.5%;
-	font-size: 2vw;
+	width: 50%;
+
+	font-size: 6vw;
 }
 
 .cardDate {
-	position: relative;
-	left: 75%;
-	bottom: 21%;
-	font-size: 1.5vw;
+	width: 50%;
+
+	text-align: right;
+	font-size: 4.5vw;
 }
 
-.cardDescription {
-	position: relative;
-	left: 4%;
-	font-size: 1.5vw;
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
-@media only screen and (max-width: 715px) {
+/* for phones */
+[class*="col-"] {
+	float: left;
+	width: 100%;
+}
+
+/* for tablets */
+@media only screen and (min-width: 600px) {
+	.col-s-1  { width:  8.33%; }
+	.col-s-2  { width: 16.66%; }
+	.col-s-3  { width:    25%; }
+	.col-s-4  { width: 33.33%; }
+	.col-s-5  { width: 41.66%; }
+	.col-s-6  { width:    50%; }
+	.col-s-7  { width: 58.33%; }
+	.col-s-8  { width: 66.66%; }
+	.col-s-9  { width:    75%; }
+	.col-s-10 { width: 83.33%; }
+	.col-s-11 { width: 91.66%; }
+	.col-s-12 { width:   100%; }
+}
+
+/* for laptops+ */
+@media only screen and (min-width: 768px) {
+	.col-1  { width:  8.33%; }
+	.col-2  { width: 16.66%; }
+	.col-3  { width:    25%; }
+	.col-4  { width: 33.33%; }
+	.col-5  { width: 41.66%; }
+	.col-6  { width:    50%; }
+	.col-7  { width: 58.33%; }
+	.col-8  { width: 66.66%; }
+	.col-9  { width:    75%; }
+	.col-10 { width: 83.33%; }
+	.col-11 { width: 91.66%; }
+	.col-12 { width:   100%; }
+
+	body {
+		margin-right: 0;
+	}
+
+	#events-title {
+		font-size: 10vw;
+	}
+
+	#events-weekly {
+		margin-left: 5%;
+		height: 40vh;
+		width: 90%;
+	}
+
+	#weekly-container {
+		margin-top: 20px;
+	}
+
+	#weekly-title {
+		margin-top: 80px;
+		font-size: 4.5vw;
+	}
+
+	#weekly-time {
+		font-size: 3vw;
+	}
+
 	#events-socials {
-		flex-flow: column nowrap;
-		width: 60vw;
-		height: 70vh;
+		margin-top: 6.6%;
+		margin-left: 6.6%;
+		flex-flow: row wrap;
+		border-radius: 43px 0 0 43px;
 	}
-	
+
 	.card {
-		width: calc(58vw - 53px);
-		height: 10vh;
-		border-radius: 48px 0 0 48px;
-		margin-left: 2vw;
-		margin-top: 1.43vh;
+		width: 44%;
+		margin: 4% 0 0 4%;
+		min-height: 100px;
 	}
+
+	.card:nth-last-child(2) { margin-bottom: 4%; }
+	.card:last-child { margin-bottom: 4%; }
 
 	.cardTitle {
-		left: 10%;
-		top: 20%;
-		font-size: 20px;
+		width: 65%;
+		font-size: 2.25vw;
 	}
 
 	.cardDate {
-		left: 70%;
-		bottom: 8%;
-		font-size: 18px;
+		width: 35%;
+		font-size: 1.6vw;
 	}
 
 	.cardDescription {
-		left: 10%;
-		font-size: 12px;
+		margin-top: 20px;
+		font-size: 1.5vw;
 	}
 }
