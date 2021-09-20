@@ -17,9 +17,72 @@ html {
 body {
 	height: 100%;
 	margin: 40px;
-	background: linear-gradient(180deg, rgba(37, 45, 66, 0.91) 2.08%, rgba(25, 138, 137, 0.8645) 39.58%, rgba(34, 96, 142, 0.91) 77.08%);
-	
+	background: linear-gradient(180deg, #2F3136 14.58%, #198A89 40.62%, #0E7891 63.54%, #00629B 90.1%);	
 	color: white;
+	
+}
+
+/* ---------- ABOUT SECITON ----------- */
+#about {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	position: relative;
+	height: 48vw;
+}
+
+#about-title {
+	width:60vw;
+	left:3.4vw;
+	
+	font-family: DMSans_Bold;
+	font-size: 6vw;
+	text-align: center;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+#about-back-title {
+	position: absolute;
+	top: 0;
+	left: -.8%;
+	z-index: -1;
+	width: 100%;
+
+	text-align: center;
+	color: #456070;
+}
+
+#about-text {
+	position: absolute;
+	top: 17.5vw;
+	left: -93px;
+	width: 61vw;
+	height: 27vw;
+
+	background: rgba(28, 177, 175, 0.24);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	backdrop-filter: blur(4px);
+	border-radius: 43px;
+}
+
+#about-description {
+	position: relative;
+	left: 10%;
+	font-size: 2vw;
+	font-family: DMSans;
+	margin-left: 2vw;
+	margin-right: 10vw;
+	margin-top: 2.3vw;
+
+	overflow-wrap: break-word;
+}
+
+#about-image {
+	position:absolute;
+	
+	right:-10%;
+	height: 50vw;
+	width: 50vw;
 }
 
 /* ---------- EVENTS SECTION ---------- */
@@ -100,7 +163,7 @@ body {
 .card {
 	width: 25vw;
 	height: 10vw;
-	margin-left: 1.6vw;
+	margin-left: 2.6vw;
 	margin-top: 1.6vw;
 	border-radius: 10px;
 
@@ -117,8 +180,8 @@ body {
 
 .cardTitle {
 	position: relative;
-	left: 4%;
-	top: 2.5%;
+	left: 5%;
+	top: 3%;
 	font-size: 2vw;
 }
 
@@ -131,7 +194,7 @@ body {
 
 .cardDescription {
 	position: relative;
-	left: 4%;
+	left: 5%;
 	font-size: 1.5vw;
 }
 
