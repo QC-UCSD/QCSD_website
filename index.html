@@ -93,6 +93,9 @@
                 var header = document.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
+			var shiftWindow = function() { scrollBy(0, -55) };
+			if (location.hash) shiftWindow();
+			window.addEventListener("hashchange", shiftWindow);
         </script>
 
 	</body>
