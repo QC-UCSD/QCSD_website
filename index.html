@@ -36,27 +36,28 @@
 				const items = this.responseText.split("\n");
 				const socialBlock = document.getElementById("events-socials");
 
-				for (var i = 0; i < items.length - 1; i++) {
-					const item = items[i].split(" : ", 3);
-					const card = document.createElement("div");
-					const row = document.createElement("div");
-					const card_title = document.createElement("div");
-					const card_date = document.createElement("div");
-					const card_desc = document.createElement("div");
-					card.setAttribute("class", "card " + (new Date(item[1]).getTime() < new Date().getTime() ? "past" : "future"));
-					row.setAttribute("class", "card-title-row");
-					card_title.setAttribute("class", "card-title");
-					card_date.setAttribute("class", "card-date");
-					card_desc.setAttribute("class", "card-description");
-					row.appendChild(card_title);
-					row.appendChild(card_date);
-					card.appendChild(row);
-					card.appendChild(card_desc);
-					card_title.innerHTML = item[0];
-					card_date.innerHTML = item[1].substring(5);
-					card_desc.innerHTML = item[2];
-
-					socialBlock.appendChild(card);
+				for (var i = 0; i < items.length; i++) {
+					if (items[i].length > 0) {
+						const item = items[i].split(" : ", 3);
+						const card = document.createElement("div");
+						const row = document.createElement("div");
+						const card_title = document.createElement("div");
+						const card_date = document.createElement("div");
+						const card_desc = document.createElement("div");
+						card.setAttribute("class", "card " + (new Date(item[1]).getTime() < new Date().getTime() ? "past" : "future"));
+						row.setAttribute("class", "card-title-row");
+						card_title.setAttribute("class", "card-title");
+						card_date.setAttribute("class", "card-date");
+						card_desc.setAttribute("class", "card-description");
+						row.appendChild(card_title);
+						row.appendChild(card_date);
+						card.appendChild(row);
+						card.appendChild(card_desc);
+						card_title.innerHTML = item[0];
+						card_date.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
+						card_desc.innerHTML = item[2];
+						socialBlock.appendChild(card);
+					}
 				}
 			}
 
