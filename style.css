@@ -102,13 +102,13 @@ body {
 	align-items:flex-start;
 }
 
-.cardTitle {
+.card-title {
 	width: 50%;
 
 	font-size: 6vw;
 }
 
-.cardDate {
+.card-date {
 	width: 50%;
 
 	text-align: right;
@@ -201,17 +201,17 @@ body {
 	.card:nth-last-child(2) { margin-bottom: 4%; }
 	.card:last-child { margin-bottom: 4%; }
 
-	.cardTitle {
+	.card-title {
 		width: 65%;
 		font-size: 2.25vw;
 	}
 
-	.cardDate {
+	.card-date {
 		width: 35%;
 		font-size: 1.6vw;
 	}
 
-	.cardDescription {
+	.card-description {
 		margin-top: 20px;
 		font-size: 1.5vw;
 	}
