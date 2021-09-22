@@ -1,1 +1,3 @@
-testing
+First Meeting
+Sep 24
+This will be our first meeting!
