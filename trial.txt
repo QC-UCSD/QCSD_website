@@ -1,4 +1,4 @@
-First Meeting : Sept 24 : This will be our first meeting!
+1<sup>st</sup> Meeting : Sept 24 : This will be our first meeting!
 Second Meeting : Oct 1 : This will be our second meeting!
 event 3 : oct 2 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 event 4 : oct 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
