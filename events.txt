@@ -1,0 +1,6 @@
+1<sup>st</sup> Meeting : 2021 Sept 24 : This will be our first meeting!
+2<sup>nd</sup> Meeting : 2021 Oct 1 : This will be our second meeting!
+event 3 : 2021 Oct 2 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+event 4 : 2021 Oct 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+event 5 : 2021 Oct 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+event 6 : 2021 Oct 5 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
