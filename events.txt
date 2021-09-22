@@ -1,6 +1,6 @@
-Previous Meeting : 2021 Sept 18 : this is a test meeting for the past css
-Previous Meeting : 2021 Sept 19 : this is another test meeting
-Previous Meeting : 2021 Sept 20 : this is the last test meeting for the past
-event 4 : 2021 Oct 3 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-event 5 : 2021 Oct 4 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-event 6 : 2021 Oct 5 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Previous Meeting : Sept 18 2021 : this is a test meeting for the past css
+Previous Meeting : Sept 19 2021 : this is another test meeting
+Previous Meeting : Sept 20 2021 : this is the last test meeting for the past
+event 4 : Oct 3 2021 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+event 5 : Oct 4 2021 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+event 6 : Oct 5 2021 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
