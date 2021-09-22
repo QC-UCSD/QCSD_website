@@ -19,9 +19,9 @@ html {
 
 body {
 	margin: 40px;
-	background: linear-gradient(180deg, #2F3136 14.58%, #198A89 40.62%, #0E7891 63.54%, #00629B 90.1%);	
+	background: linear-gradient(180deg, #2F3136 14.58%, #198A89 40.62%, #0E7891 63.54%, #00629B 90.1%);
 	color: white;
-	
+
 }
 
 /* ---------- ABOUT SECITON ----------- */
@@ -36,7 +36,7 @@ body {
 #about-title {
 	width:60vw;
 	left:3.4vw;
-	
+
 	font-family: DMSans_Bold;
 	font-size: 6vw;
 	text-align: center;
@@ -81,7 +81,7 @@ body {
 
 #about-image {
 	position:absolute;
-	
+
 	right:-10%;
 	height: 50vw;
 	width: 50vw;
@@ -145,10 +145,8 @@ body {
 }
 
 .card {
-	width: 25vw;
-	height: 10vw;
-	margin-left: 2.6vw;
-	margin-top: 1.6vw;
+	margin: 20px 20px 0 20px;
+	padding: 10px;
 	border-radius: 10px;
 
 	font-family: DMSans;
@@ -170,13 +168,13 @@ body {
 .card-title {
 	width: 50%;
 
-	font-size: 6vw;
+	font-size: 4.5vw;
 }
 
 .card-date {
 	width: 50%;
 	text-align: right;
-	font-size: 4.5vw;
+	font-size: 4vw;
 }
 
 .row::after {
@@ -189,12 +187,12 @@ body {
 [class*="col-"] {
 	float: left;
 	width: 100%;
+}
 
 .cardDescription {
 	position: relative;
 	left: 5%;
-	font-size: 1.5vw;
-
+	font-size: 2vw;
 }
 
 /* for tablets */
