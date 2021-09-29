@@ -114,6 +114,7 @@ header.sticky ul li a:hover{
 	flex-wrap: wrap;
 	position: relative;
 	height: 48vw;
+	top: .5vw;
 }
 
 #about-title {
@@ -165,7 +166,7 @@ header.sticky ul li a:hover{
 #about-image {
 	position:absolute;
 	
-	right:-10%;
+	right:-15%;
 	height: 50vw;
 	width: 50vw;
 }
