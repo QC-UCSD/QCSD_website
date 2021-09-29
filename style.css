@@ -40,7 +40,6 @@ header{
 }
 
 header.sticky{
-    background: linear-gradient(180deg, rgba(11, 98, 135, 1) 100%, rgba(73, 124, 184, 1) 100%);
 	width: 100%;
 }
 
@@ -92,8 +91,8 @@ header ul li a{
 }
 
 a:hover{
-    color: #00629B;
-    text-decoration: none;
+    color: #67c4fa;
+    text-decoration: underline;
 }
 
 header.sticky ul li a:hover{
@@ -143,7 +142,7 @@ header.sticky ul li a:hover{
 	top: 17.5vw;
 	left: -93px;
 	width: 61vw;
-	height: 27vw;
+	height: 25vw;
 
 	background: rgba(28, 177, 175, 0.24);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -153,11 +152,11 @@ header.sticky ul li a:hover{
 
 #about-description {
 	position: relative;
-	left: 10%;
-	font-size: 2vw;
+	left: 9%;
+	font-size: 1.5vw;
 	font-family: DMSans;
 	margin-left: 2vw;
-	margin-right: 10vw;
+	margin-right: 15%;
 	margin-top: 2.3vw;
 
 	overflow-wrap: break-word;
