@@ -3,22 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="style.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
 	</head>
 	<body>
-		<div class="navbar">
-            <header>
-                <a href="#" class="logo"><img src="images/qcsd.png" id="nav-logo"></a>
-                <ul class="options">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#events">events</a></li>
-                    <li><a href="#contact">contact</a></li>
-                </ul>
-            </header>
-        </div>
+		<div id="nav-bar"></div>
 		<div id="about">
 			<div id="about-title">
 				<div id="about-back-title">
@@ -85,18 +72,5 @@
 		
 		<div id="contact-us"></div>
 		<div id="footer"></div>
-
-		<section class="banner"></section>
-        <script type="text/javascript">
-            window.addEventListener("scroll", 
-            function(){
-                var header = document.querySelector("header");
-                header.classList.toggle("sticky", window.scrollY > 0);
-            })
-			var shiftWindow = function() { scrollBy(0, -55) };
-			if (location.hash) shiftWindow();
-			window.addEventListener("hashchange", shiftWindow);
-        </script>
-
 	</body>
 </html>
