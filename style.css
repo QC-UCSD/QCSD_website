@@ -22,7 +22,92 @@ body {
 	
 }
 
-/* ---------- ABOUT SECITON ----------- */
+/* ---------- NAVBAR SECTION ----------*/
+header{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .6s;
+    padding: .2vw 2vw;
+    z-index: 1000000;
+	background: linear-gradient(180deg, rgba(11, 98, 135, 0.7) 0%, rgba(73, 124, 184, 0.7) 100%);
+	backdrop-filter: blur(4px);
+	font-family: "DMSans";
+}
+
+header.sticky{
+    background: linear-gradient(180deg, rgba(11, 98, 135, 1) 100%, rgba(73, 124, 184, 1) 100%);
+	width: 100%;
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    transition: .6s;
+    letter-spacing: 2px;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	right: 4vw
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-transform: none;
+    color: #fff;
+    font-family: DMSans_bold;
+    transition: .6s;
+    text-decoration: none;
+	font-size: 1.5vw;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    padding-bottom: 2vw;
+}
+
+a:hover{
+    color: #00629B;
+    text-decoration: none;
+}
+
+header.sticky ul li a:hover{
+    color: #00629B;
+    text-decoration: none;
+}
+
+#nav-logo {
+	width: 4vw;
+	position:relative;
+	top:.3vw;
+}
+
+/* ---------- ABOUT SECTION ----------- */
 #about {
 	display: flex;
 	flex-direction: column;
@@ -84,6 +169,7 @@ body {
 	height: 50vw;
 	width: 50vw;
 }
+
 
 /* ---------- EVENTS SECTION ---------- */
 #events {
