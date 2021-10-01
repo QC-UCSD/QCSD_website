@@ -23,6 +23,7 @@ body {
 	overflow: hidden;
 	margin:0;
 	padding:0;
+	font-family: DMSans;
 }
 
 /* ---------- NAVBAR SECTION ----------*/
@@ -115,22 +116,16 @@ header.sticky ul li a:hover{
 
 /* ---------- ABOUT SECTION ----------- */
 #about {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
 	position: relative;
 	height: 50vw;
 	top: 4vw;
 }
 
 #about-title {
-	position:relative;
-	width: 60vw;
-	left: 2vw;
-
 	font-family: DMSans_Bold;
-	font-size: 6vw;
+	font-size: 9vw;
 	text-align: center;
+
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
@@ -145,36 +140,36 @@ header.sticky ul li a:hover{
 }
 
 #about-text {
-	position: absolute;
-	top: 17.5vw;
-	width: 61vw;
-	height: 25vw;
+	position: relative;
+	width: 90%;
+	margin: 20px 0 0 5%;
 
-	margin:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
 	background: rgba(28, 177, 175, 0.24);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	backdrop-filter: blur(4px);
-	border-radius: 0 4vw 4vw 0;
+	border-radius: 4vw;
 }
 
 #about-description {
 	position: relative;
-	font-size: 1.5vw;
-	font-family: DMSans;
-	margin-left: 3vw;
-	margin-right: 3vw;
-	margin-top: 3vw;
+	font-size: 3vw;
+	margin: 0 3vw 0 3vw;
+	padding: 15px;
 
 	overflow-wrap: break-word;
 }
 
 #about-image {
-	position:absolute;
-	right:-15%;
-	height: 50vw;
-	width: 50vw;
-	overflow: hidden;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	opacity: 70%;
 }
 
 /* ---------- EVENTS SECTION ---------- */
@@ -197,8 +192,9 @@ header.sticky ul li a:hover{
 }
 
 #events-weekly {
-	margin-top: 20px;
+	margin: 20px 0 0 5%;
 	height: 60vw;
+	width: 90%;
 
 	text-align: center;
 	font-family: DMSans;
@@ -224,7 +220,8 @@ header.sticky ul li a:hover{
 #events-socials {
 	display: flex;
 	flex-flow: column nowrap;
-	margin-top: 40px;
+	margin: 40px 0 0 5%;
+	width: 90%;
 
 	font-family: DMSans;
 
@@ -267,6 +264,13 @@ header.sticky ul li a:hover{
 	font-size: 4vw;
 }
 
+.cardDescription {
+	position: relative;
+	left: 5%;
+	font-size: 2vw;
+}
+
+/* ---------- RWD ---------- */
 .row::after {
 	content: "";
 	clear: both;
@@ -277,12 +281,6 @@ header.sticky ul li a:hover{
 [class*="col-"] {
 	float: left;
 	width: 100%;
-}
-
-.cardDescription {
-	position: relative;
-	left: 5%;
-	font-size: 2vw;
 }
 
 /* for tablets */
@@ -316,6 +314,45 @@ header.sticky ul li a:hover{
 	.col-11 { width: 91.66%; }
 	.col-12 { width:   100%; }
 
+	/* ---------- ABOUT SECTION ---------- */
+	#about {
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	#about-title {
+		position:relative;
+		width: 60vw;
+		left: 2vw;
+
+		font-size: 6vw;
+	}
+
+	#about-text {
+		position: absolute;
+		top: 17.5vw;
+		width: 61vw;
+		height: 25vw;
+
+		margin: 0;
+
+		border-radius: 0 4vw 4vw 0;
+	}
+
+	#about-description {
+		font-size: 1.5vw;
+	}
+
+	#about-image {
+		left: unset;
+		top: unset;
+		right: -15%;
+		height: 50vw;
+		width: 50vw;
+		overflow: hidden;
+	}
+
+	/* ---------- EVENTS SECTION ---------- */
 	body {
 		margin-right: 0;
 	}
@@ -344,8 +381,8 @@ header.sticky ul li a:hover{
 	}
 
 	#events-socials {
-		margin-top: 6.6%;
-		margin-left: 6.6%;
+		margin: 6.6% 0 0 6.6%;
+		width: 95%;
 		flex-flow: row wrap;
 		border-radius: 43px 0 0 43px;
 	}
