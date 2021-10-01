@@ -6,8 +6,10 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
 		<link rel="manifest" href="/site.webmanifest">
 	</head>
+
 	<body>
 		<div class="navbar">
             <header>
@@ -20,29 +22,31 @@
             </header>
         </div>
 		<div id="about">
-			<div id="about-title">
-				<div id="about-back-title">
-					quantum computing
-					at ucsd
+			<div id="row">
+				<div class="col-8">
+					<div id="about-title">
+						quantum computing
+						at ucsd
+					</div>
+					<div id="about-text">
+						<div id="about-description">
+							If you follow tech news at all, you’ve probably seen <b>a lot</b> of hype around quantum computing.
+							Quantum computing is a rapidly developing field that could revolutionize artificial intelligence,
+							cybersecurity, and drug development. However, it is also a field that can be unwieldy to an undergrad.
+							<br>
+							<br>
+							<i>That’s where we come in!</i> We’re a community of students dedicated to helping people like you learn
+							quantum computing. From beginners' workshops to Quantum Computing Hackathons, we're here to make learning
+							less daunting and more interesting!
+						</div>
+					</div>
 				</div>
-				quantum computing
-				at ucsd
-			</div>
-			<div id="about-text">
-				<div id="about-description">
-					If you follow tech news at all, you’ve probably seen <b>a lot</b> of hype around quantum computing. 
-					Quantum computing is a rapidly developing field that could revolutionize artificial intelligence, 
-					cybersecurity, and drug development. However, it is also a field that can be unwieldy to an undergrad.
-					<br>
-					<br>
-					<i>That’s where we come in!</i> We’re a community of students dedicated to helping people like you learn 
-					quantum computing. From beginners' workshops to Quantum Computing Hackathons, we're here to make learning
-					less daunting and more interesting!
+				<div id="col-4">
+					<img src="images\main-pattern.svg" id="about-image">
 				</div>
 			</div>
-			<img src="images\main-pattern.svg" id="about-image">
 		</div>
-		
+
 		<div id="events">
 			<div class="row">
 				<div class="col-5">
@@ -66,7 +70,9 @@
 		<div id="contact-us"></div>
 		<div id="footer"></div>
 
-		<script>
+		<section class="banner"></section>
+
+		<script type="text/javascript">
 			function reqListener () {
 				const items = this.responseText.split("\n");
 				const socialBlock = document.getElementById("events-socials");
@@ -100,17 +106,15 @@
 			oReq.addEventListener("load", reqListener);
 			oReq.open("GET", "https://raw.githubusercontent.com/QC-UCSD/QCSD_website/event-section-testing/events.txt");
 			oReq.send();
-		</script>
-		<section class="banner"></section>
-        <script type="text/javascript">
-            window.addEventListener("scroll", 
-            function(){
+
+			window.addEventListener("scroll",
+            function() {
                 var header = document.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
 			var shiftWindow = function() { scrollBy(0, -55) };
 			if (location.hash) shiftWindow();
 			window.addEventListener("hashchange", shiftWindow);
-        </script>
+		</script>
 	</body>
 </html>

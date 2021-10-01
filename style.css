@@ -20,7 +20,7 @@ html {
 body {
 	background: linear-gradient(180deg, #2F3136 14.58%, #198A89 40.62%, #0E7891 63.54%, #00629B 90.1%);
 	color: white;
-	overflow:hidden;
+	overflow: hidden;
 	margin:0;
 	padding:0;
 }
@@ -109,8 +109,8 @@ header.sticky ul li a:hover{
 
 #nav-logo {
 	width: 4vw;
-	position:absolute;
-	top:-2vw;
+	position: absolute;
+	top: -2vw;
 }
 
 @media only screen and (max-width: 800px){
@@ -122,11 +122,6 @@ header.sticky ul li a:hover{
 		align-items: center;
 		right:8vw;
 		height:100%;
-	}	
-}
-@media only screen and (max-width: 650px) {
-	#nav-logo{
-		top:-1.2vw
 	}
 }
 
@@ -142,7 +137,7 @@ header.sticky ul li a:hover{
 
 #about-title {
 	position:relative;
-	width:60vw;
+	width: 60vw;
 	left: 2vw;
 
 	font-family: DMSans_Bold;
@@ -151,14 +146,13 @@ header.sticky ul li a:hover{
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-#about-back-title {
-	position: absolute;
-	top: 0;
-	left: -.8%;
+#about-title::before {
 	z-index: -1;
+	position: absolute;
+	left: -0.8%;
 	width: 100%;
 
-	text-align: center;
+	content: "quantum computing at ucsd";
 	color: #456070;
 }
 
@@ -194,7 +188,6 @@ header.sticky ul li a:hover{
 	width: 50vw;
 	overflow: hidden;
 }
-
 
 /* ---------- EVENTS SECTION ---------- */
 #events-title {
