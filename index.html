@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
 		<link rel="manifest" href="/site.webmanifest">
+		<title>QCSD</title>
 	</head>
+
 	<body>
 		<div class="navbar">
             <header>
@@ -19,91 +22,101 @@
                 </ul>
             </header>
         </div>
+
 		<div id="about">
-			<div id="about-title">
-				<div id="about-back-title">
-					quantum computing
-					at ucsd
+			<div id="row">
+				<div class="col-9">
+					<div id="about-title">
+						quantum computing
+						at ucsd
+					</div>
+					<div id="about-text">
+						<div id="about-description">
+							If you follow tech news at all, you’ve probably seen <b>a lot</b> of hype around quantum computing.
+							Quantum computing is a rapidly developing field that could revolutionize artificial intelligence,
+							cybersecurity, and drug development. However, it is also a field that can be unwieldy to an undergrad.
+							<br>
+							<br>
+							<i>That’s where we come in!</i> We’re a community of students dedicated to helping people like you learn
+							quantum computing. From beginners' workshops to Quantum Computing Hackathons, we're here to make learning
+							less daunting and more interesting!
+						</div>
+					</div>
 				</div>
-				quantum computing
-				at ucsd
-			</div>
-			<div id="about-text">
-				<div id="about-description">
-					If you follow tech news at all, you’ve probably seen <b>a lot</b> of hype around quantum computing. 
-					Quantum computing is a rapidly developing field that could revolutionize artificial intelligence, 
-					cybersecurity, and drug development. However, it is also a field that can be unwieldy to an undergrad.
-					<br>
-					<br>
-					<i>That’s where we come in!</i> We’re a community of students dedicated to helping people like you learn 
-					quantum computing. From beginners' workshops to Quantum Computing Hackathons, we're here to make learning
-					less daunting and more interesting!
+				<div id="col-3">
+					<img src="images\main-pattern.svg" id="about-image">
 				</div>
 			</div>
-			<img src="images\main-pattern.svg" id="about-image">
 		</div>
-		
+
 		<div id="events">
-			<!-- todo: responsiveness to screen width, make single column at 715px -->
-			<div id="events-col1">
-				<div id="events-title">
-					<div id="backtitle">events</div>
-					events
+			<div class="row">
+				<div class="col-5">
+					<div id="events-title">events</div>
+					<div id="events-weekly">
+						<div id="weekly-container">
+							<div id="weekly-title">Weekly General<br>Sessions</div>
+						</div>
+						<div id="weekly-container">
+							<div id="weekly-time">Tuesdays, 6pm</div>
+						</div>
+					</div>
 				</div>
-				<div id="events-weekly">
-					<div id="weeklyTitle">Weekly General<br>Sessions</div>
-					<div id="weeklyTime">Tuesdays, 6pm</div>
-				</div>
-			</div>
-			<!-- todo: read in events (js onload) from txt files -->
-			<div id="events-socials">
-				<div class="card past">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Sept 4</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card past">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Sept 5</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card past">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Sept 6</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card future">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Dec 1</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card future">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Dec 2</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
-				</div>
-				<div class="card future">
-					<div class="cardTitle">Event Title</div>
-					<div class="cardDate">Dec 3</div>
-					<div class="cardDescription">Lorem Ipsum Dolor Sit Amet</div>
+
+				<div class="col-7">
+					<div id="events-socials"></div>
 				</div>
 			</div>
 		</div>
-		
+
 		<div id="contact-us"></div>
 		<div id="footer"></div>
 
 		<section class="banner"></section>
-        <script type="text/javascript">
-            window.addEventListener("scroll", 
-            function(){
+
+		<script type="text/javascript">
+			function reqListener () {
+				const items = this.responseText.split("\n");
+				const socialBlock = document.getElementById("events-socials");
+
+				for (var i = 0; i < items.length; i++) {
+					if (items[i].length > 0) {
+						const item = items[i].split(" : ", 3);
+						const card = document.createElement("div");
+						const row = document.createElement("div");
+						const card_title = document.createElement("div");
+						const card_date = document.createElement("div");
+						const card_desc = document.createElement("div");
+						card.setAttribute("class", "card " + (new Date(item[1]).getTime() < new Date().getTime() ? "past" : "future"));
+						row.setAttribute("class", "card-title-row");
+						card_title.setAttribute("class", "card-title");
+						card_date.setAttribute("class", "card-date");
+						card_desc.setAttribute("class", "card-description");
+						row.appendChild(card_title);
+						row.appendChild(card_date);
+						card.appendChild(row);
+						card.appendChild(card_desc);
+						card_title.innerHTML = item[0];
+						card_date.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
+						card_desc.innerHTML = item[2];
+						socialBlock.appendChild(card);
+					}
+				}
+			}
+
+			var oReq = new XMLHttpRequest();
+			oReq.addEventListener("load", reqListener);
+			oReq.open("GET", "https://raw.githubusercontent.com/QC-UCSD/QCSD_website/event-section-testing/events.txt");
+			oReq.send();
+
+			window.addEventListener("scroll",
+            function() {
                 var header = document.querySelector("header");
                 header.classList.toggle("sticky", window.scrollY > 0);
             })
 			var shiftWindow = function() { scrollBy(0, -55) };
 			if (location.hash) shiftWindow();
 			window.addEventListener("hashchange", shiftWindow);
-        </script>
-
+		</script>
 	</body>
 </html>
