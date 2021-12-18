@@ -53,12 +53,12 @@
 			<div class="row">
 				<div class="col-5">
 					<div id="events-title">events</div>
-					<div id="events-weekly">
-						<div id="weekly-container">
-							<div id="weekly-title">Weekly General<br>Sessions</div>
+					<div id="featured-event">
+						<div id="featured-container">
+							<div id="featured-title"></div>
 						</div>
-						<div id="weekly-container">
-							<div id="weekly-time">Tuesdays, 6pm</div>
+						<div id="featured-container">
+							<div id="featured-time"></div>
 						</div>
 					</div>
 				</div>
@@ -69,7 +69,10 @@
 			</div>
 		</div>
 
-		<div id="contact-us"></div>
+		<div id="contact-us">
+
+		</div>
+
 		<div id="footer"></div>
 
 		<section class="banner"></section>
@@ -78,8 +81,16 @@
 			function reqListener () {
 				const items = this.responseText.split("\n");
 				const socialBlock = document.getElementById("events-socials");
+				const featuredTitleBlock = document.getElementById("featured-title");
+				const featuredTimeBlock = document.getElementById("featured-time");
 
-				for (var i = 0; i < items.length; i++) {
+				if (items[0].length > 0) {
+					const item = items[0].split(" : ", 2);
+					featuredTitleBlock.innerHTML = item[0];
+					featuredTimeBlock.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
+				}
+
+				for (var i = 1; i < items.length; i++) {
 					if (items[i].length > 0) {
 						const item = items[i].split(" : ", 3);
 						const card = document.createElement("div");

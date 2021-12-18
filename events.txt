@@ -1,6 +1,7 @@
-Previous Meeting : Sept 18 2021 : this is a test meeting for the past css
-Previous Meeting : Sept 19 2021 : this is another test meeting
-Previous Meeting : Sept 20 2021 : this is the last test meeting for the past
-event 4 : Oct 3 2021 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-event 5 : Oct 4 2021 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-event 6 : Oct 5 2021 : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+QCSD GBM : Jan 14 2022 
+Intro to QC : Jan 7 2022 : Overview of the history and developments of quantum computing.
+Quantum Cryptography : Jan 10 2022 : Join us and ACM Cyber as we dive into quantum computing and it's applications in cryptography.
+Quantum Computing at UCSD GBM : Jan 14 2022 : Learn about what we do, upcoming plans, and how to get involved!
+Quantum Hardware : Jan 25 2022 : A board overview of how electrical engineers and physicist implement quantum computing and
+QC Explained : February 18, 2022 : Find out about the science behind quantum computing
+IEEE x QCSD Social : February 25, 2022 : Come with us to destress after midterms!

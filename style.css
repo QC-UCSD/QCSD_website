@@ -191,7 +191,7 @@ header.sticky ul li a:hover{
 	color: #33779E;
 }
 
-#events-weekly {
+#featured-event {
 	margin: 20px 0 0 5%;
 	height: 60vw;
 	width: 90%;
@@ -205,7 +205,7 @@ header.sticky ul li a:hover{
 	border-radius: 43px;
 }
 
-#weekly-container {
+#featured-container {
 	height: 50%;
 	width: 100%;
 
@@ -214,8 +214,8 @@ header.sticky ul li a:hover{
 	align-items: center;
 }
 
-#weekly-title { font-size:   8vw; }
-#weekly-time  { font-size: 6.5vw; }
+#featured-title { font-size:   8vw; }
+#featured-time  { font-size: 6.5vw; }
 
 #events-socials {
 	display: flex;
@@ -360,22 +360,22 @@ header.sticky ul li a:hover{
 		font-size: 10vw;
 	}
 
-	#events-weekly {
+	#featured-event {
 		margin-left: 5%;
 		height: 40vh;
 		width: 90%;
 	}
 
-	#weekly-container {
+	#featured-container {
 		margin-top: 20px;
 	}
 
-	#weekly-title {
+	#featured-title {
 		margin-top: 80px;
 		font-size: 4.5vw;
 	}
 
-	#weekly-time {
+	#featured-time {
 		font-size: 3vw;
 	}
 
@@ -479,21 +479,21 @@ header.sticky ul li a:hover{
 		width: 500px;
 	}
 
-	#events-weekly {
+	#featured-event {
 		margin-left: 25px;
 		height: 300px;
 		width: 450px;
 	}
 
-	#weekly-container {
+	#featured-container {
 		width: 450px;
 	}
 
-	#weekly-title {
+	#featured-title {
 		font-size: 40px;
 	}
 
-	#weekly-time {
+	#featured-time {
 		font-size: 32.5px;
 	}
 
