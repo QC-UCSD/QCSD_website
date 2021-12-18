@@ -108,7 +108,12 @@
 						card.appendChild(row);
 						card.appendChild(card_desc);
 						card_title.innerHTML = item[0];
-						card_date.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
+						const dates = item[1].split(" ", 4);
+						let time = "";
+						if(dates[3] !== undefined){
+							time = " " + dates[3];
+						}
+						card_date.innerHTML = dates[0] + " " + dates[1] + time;
 						card_desc.innerHTML = item[2];
 						socialBlock.appendChild(card);
 					}
@@ -117,7 +122,7 @@
 
 			var oReq = new XMLHttpRequest();
 			oReq.addEventListener("load", reqListener);
-			oReq.open("GET", "https://raw.githubusercontent.com/QC-UCSD/QCSD_website/event-section-testing/events.txt");
+			oReq.open("GET", "events.txt");
 			oReq.send();
 
 			window.addEventListener("scroll",
