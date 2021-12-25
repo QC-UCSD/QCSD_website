@@ -3,10 +3,10 @@
 	<head>
 		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="images/favicon.png">
 		<link rel="manifest" href="/site.webmanifest">
 		<title>QCSD</title>
 	</head>
@@ -53,12 +53,13 @@
 			<div class="row">
 				<div class="col-5">
 					<div id="events-title">events</div>
-					<div id="events-weekly">
-						<div id="weekly-container">
-							<div id="weekly-title">Weekly General<br>Sessions</div>
+					<div id="featured-event">
+						<div id="featured-container">
+							<div id="featured-title"></div>
 						</div>
-						<div id="weekly-container">
-							<div id="weekly-time">Tuesdays, 6pm</div>
+						<div id="featured-container">
+							<div id="featured-time"></div>
+
 						</div>
 					</div>
 				</div>
@@ -69,17 +70,37 @@
 			</div>
 		</div>
 
-		<div id="contact-us"></div>
+		<div id="contact-us">
+			<div class="row">
+				<div class="col-7" style="float: right;">
+					<div id="involve-title">get involved!</div>
+					<iframe class="embedded-vid" src="https://www.youtube.com/embed/RygKRpndKEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="col-5" style="float: left;">
+					<div id="social-icons">
+						<a href="https://discord.com/invite/CYPWdXpNqV"><img src="images/discord.png"></a>
+						<a href="https://www.facebook.com/qcucsd"><img src="images/FB.png"></a>
+						<a href="https://www.youtube.com/channel/UC89BhAeFQ16PcYK783eCfNw"><img src="images/YT.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+    
 		<div id="footer"></div>
-
-		<section class="banner"></section>
-
 		<script type="text/javascript">
 			function reqListener () {
 				const items = this.responseText.split("\n");
 				const socialBlock = document.getElementById("events-socials");
+				const featuredTitleBlock = document.getElementById("featured-title");
+				const featuredTimeBlock = document.getElementById("featured-time");
 
-				for (var i = 0; i < items.length; i++) {
+				if (items[0].length > 0) {
+					const item = items[0].split(" : ", 2);
+					featuredTitleBlock.innerHTML = item[0];
+					featuredTimeBlock.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
+				}
+
+				for (var i = 1; i < items.length; i++) {
 					if (items[i].length > 0) {
 						const item = items[i].split(" : ", 3);
 						const card = document.createElement("div");
@@ -97,7 +118,12 @@
 						card.appendChild(row);
 						card.appendChild(card_desc);
 						card_title.innerHTML = item[0];
-						card_date.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
+						const dates = item[1].split(" ", 4);
+						let time = "";
+						if(dates[3] !== undefined){
+							time = " " + dates[3];
+						}
+						card_date.innerHTML = dates[0] + " " + dates[1] + time;
 						card_desc.innerHTML = item[2];
 						socialBlock.appendChild(card);
 					}
@@ -106,7 +132,7 @@
 
 			var oReq = new XMLHttpRequest();
 			oReq.addEventListener("load", reqListener);
-			oReq.open("GET", "https://raw.githubusercontent.com/QC-UCSD/QCSD_website/event-section-testing/events.txt");
+			oReq.open("GET", "events.txt");
 			oReq.send();
 
 			window.addEventListener("scroll",
