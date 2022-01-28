@@ -1,4 +1,4 @@
-CSES x QCSD Intro to QC: Jan 28 2022
+CSES x QCSD Intro to QC : Jan 28 2022
 Quantum Cryptography : Jan 10 2022 6PM-8PM : Join us and ACM Cyber as we dive into quantum computing and it's applications in cryptography.
 Quantum Computing at UCSD GBM : Jan 14 2022 4PM-5PM : Learn about what we do, upcoming plans, and how to get involved!
 Quantum Hardware : Jan 25 2022 4PM-5PM : A board overview of how electrical engineers and physicist implement quantum computing
