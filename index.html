@@ -94,21 +94,19 @@
 				const featuredTitleBlock = document.getElementById("featured-title");
 				const featuredTimeBlock = document.getElementById("featured-time");
 
-				if (items[0].length > 0) {
-					const item = items[0].split(" : ", 2);
-					featuredTitleBlock.innerHTML = item[0];
-					featuredTimeBlock.innerHTML = item[1].substring(0, item[1].lastIndexOf(" "));
-				}
+				var featuredItem = undefined;
+				var featuredDate = undefined
 
-				for (var i = 1; i < items.length; i++) {
+				for (var i = 0; i < items.length; i++) {
 					if (items[i].length > 0) {
-						const item = items[i].split(" : ", 3);
+						const item = items[i].split(" : ", 4);
 						const card = document.createElement("div");
 						const row = document.createElement("div");
 						const card_title = document.createElement("div");
 						const card_date = document.createElement("div");
 						const card_desc = document.createElement("div");
-						card.setAttribute("class", "card " + (new Date(item[1]).getTime() < new Date().getTime() ? "past" : "future"));
+						const itemDate = new Date(item[2]);
+						card.setAttribute("class", "card " + (itemDate.getTime() < new Date().getTime() ? "past" : "future"));
 						row.setAttribute("class", "card-title-row");
 						card_title.setAttribute("class", "card-title");
 						card_date.setAttribute("class", "card-date");
@@ -124,9 +122,29 @@
 							time = " " + dates[3];
 						}
 						card_date.innerHTML = dates[0] + " " + dates[1] + time;
-						card_desc.innerHTML = item[2];
+						card_desc.innerHTML = item[3];
 						socialBlock.appendChild(card);
+
+						if(featuredItem === undefined && itemDate.getTime() > new Date().getTime()){
+							featuredItem = item;
+							featuredDate = itemDate;
+						}
+						else if(itemDate.getTime() > new Date().getTime() && itemDate.getTime() < featuredDate.getTime()){
+							featuredItem = item;
+							featuredDate = itemDate;
+						}
 					}
+				}
+
+				if (featuredItem !== undefined) {
+					featuredTitleBlock.innerHTML = featuredItem[0];
+
+					const dates = featuredItem[1].split(" ", 4);
+					let time = "";
+					if(dates[3] !== undefined){
+						time = " " + dates[3];
+					}
+					featuredTimeBlock.innerHTML = dates[0] + " " + dates[1] + time;
 				}
 			}
 

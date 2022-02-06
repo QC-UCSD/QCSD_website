@@ -1,7 +1,6 @@
-CSES x QCSD Intro to QC : Jan 28 2022
-Quantum Computing at UCSD GBM : Jan 14 2022 4PM-5PM : Learn about what we do, upcoming plans, and how to get involved!
-Quantum Hardware : Jan 25 2022 4PM-5PM : A board overview of how electrical engineers and physicist implement quantum computing
-CSES x QCSD Intro to QC : Jan 28 2022 5PM-6PM : Join QCSD and CSES for an overview of some of the basic concepts behind quantum computing, as well as the potential applications
-iQuHack : Jan 28-30 2022 : Join in on MIT's Quantum Hackathon! QCSD will be organizing teams to build apps using quantum computers. All levels of experience are welcome to join!
-QC Explained : Feb 18 2022 : Find out about the science behind quantum computing
-IEEE x QCSD Social : Feb 25 2022 : Come with us to destress after midterms!
+Quantum Computing at UCSD GBM : Jan 14 2022 4PM-5PM : Jan 14, 2022 04:00:00 : Learn about what we do, upcoming plans, and how to get involved!
+Quantum Hardware : Jan 25 2022 4PM-5PM : Jan 25, 2022 04:00:00 : A board overview of how electrical engineers and physicist implement quantum computing
+CSES x QCSD Intro to QC : Jan 28 2022 5PM-6PM : Jan 28, 2022 05:00:00 : Join QCSD and CSES for an overview of some of the basic concepts behind quantum computing, as well as the potential applications
+iQuHack : Jan 28-30 2022 : Jan 28, 2022 : Join in on MIT's Quantum Hackathon! QCSD will be organizing teams to build apps using quantum computers. All levels of experience are welcome to join!
+Intro to QC++ : Feb 18 2022 : Feb 18, 2022 : Find out about the science behind quantum computing
+IEEE x QCSD Social : Feb 25 2022 : Feb 25, 2022 : Come with us to destress after midterms!
