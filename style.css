@@ -205,7 +205,10 @@ header.sticky ul li a:hover{
 	align-items: center;
 }
 
-#featured-title { font-size:   8vw; }
+#featured-title { 
+	font-size:   8vw; 
+	width: 90%;
+}
 #featured-time  { font-size: 6.5vw; }
 
 #events-socials {
