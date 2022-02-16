@@ -426,7 +426,7 @@ header.sticky ul li a:hover{
 
 	#featured-event {
 		margin-left: 5%;
-		height: 40vh;
+		height: 30vw;
 		width: 90%;
 	}
 
@@ -435,7 +435,7 @@ header.sticky ul li a:hover{
 	}
 
 	#featured-title {
-		margin-top: 40px;
+		margin-top: 4vw;
 		font-size: 4.5vw;
 	}
 
