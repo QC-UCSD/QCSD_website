@@ -97,7 +97,7 @@
 				var featuredItem = undefined;
 				var featuredDate = undefined
 
-				for (var i = 0; i < items.length; i++) {
+				for (var i = 1; i < items.length; i++) {
 					if (items[i].length > 0) {
 						const item = items[i].split(" : ", 4);
 						const card = document.createElement("div");
@@ -122,6 +122,7 @@
 							time = " " + dates[3];
 						}
 						card_date.innerHTML = dates[0] + " " + dates[1] + time;
+
 						card_desc.innerHTML = item[3];
 						socialBlock.appendChild(card);
 
