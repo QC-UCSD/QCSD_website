@@ -205,7 +205,10 @@ header.sticky ul li a:hover{
 	align-items: center;
 }
 
-#featured-title { font-size:   8vw; }
+#featured-title { 
+	font-size:   8vw; 
+	width: 90%;
+}
 #featured-time  { font-size: 6.5vw; }
 
 #events-socials {
@@ -423,7 +426,7 @@ header.sticky ul li a:hover{
 
 	#featured-event {
 		margin-left: 5%;
-		height: 40vh;
+		height: 30vw;
 		width: 90%;
 	}
 
@@ -432,7 +435,7 @@ header.sticky ul li a:hover{
 	}
 
 	#featured-title {
-		margin-top: 40px;
+		margin-top: 4vw;
 		font-size: 4.5vw;
 	}
 
@@ -499,7 +502,7 @@ header.sticky ul li a:hover{
 	}
 
 	#social-icons img{
-		width: 80%;
+		width: 75%;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
