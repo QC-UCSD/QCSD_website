@@ -79,9 +79,9 @@ header ul li a {
     text-transform: none;
     color: #FFF;
     font-family: DMSans_bold;
+	font-size: max(1.5vw, 10px);
     transition: .6s;
     text-decoration: none;
-	font-size: max(1.5vw, 10px);
 	align-self: center;
 }
 
@@ -205,8 +205,8 @@ header.sticky ul li a:hover{
 	align-items: center;
 }
 
-#featured-title { 
-	font-size:   8vw; 
+#featured-title {
+	font-size:   8vw;
 	width: 90%;
 }
 #featured-time  { font-size: 6.5vw; }
@@ -424,6 +424,20 @@ header.sticky ul li a:hover{
 		margin-top: 5%;
 	}
 
+	/* works specifically to resolve displacement issue in safari 11+ */
+	@media not all and (min-resolution:.001dpcm) {
+		@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+			#events-title::before {
+				z-index: -1;
+				position: absolute;
+				left: -29.8%;
+
+				content: "events";
+				color: #33779E;
+			}
+		}
+	}
+
 	#featured-event {
 		margin-left: 5%;
 		height: 30vw;
@@ -501,7 +515,7 @@ header.sticky ul li a:hover{
 		align-items: center;
 	}
 
-	#social-icons img{
+	#social-icons img {
 		width: 75%;
 		display: block;
 		margin-left: auto;
@@ -522,10 +536,24 @@ header.sticky ul li a:hover{
 		z-index: -1;
 		position: absolute;
 		left: -1.5%;
-		width: 100%;
 
 		content: "get involved!";
 		color: #1A3968;
+	}
+
+	/* works specifically to resolve displacement issue in safari 11+ */
+	@media not all and (min-resolution:.001dpcm) {
+		@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+			#involve-title::before {
+				z-index: -1;
+				position: absolute;
+				left: 20.1%;
+
+				content: "get\Ainvolved!";
+				white-space: pre;
+				color: #1A3968;
+			}
+		}
 	}
 
 	.embedded-vid{
